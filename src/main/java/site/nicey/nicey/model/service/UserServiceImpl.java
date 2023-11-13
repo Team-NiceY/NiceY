@@ -1,12 +1,11 @@
-package com.ssafy.board.model.service;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package site.nicey.nicey.model.service;
 
 import com.ssafy.board.model.dao.UserDao;
 import com.ssafy.board.model.dto.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {

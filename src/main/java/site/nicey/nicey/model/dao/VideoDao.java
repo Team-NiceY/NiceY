@@ -1,4 +1,4 @@
-package com.ssafy.board.model.dao;
+package site.nicey.nicey.model.dao;
 
 import com.ssafy.board.model.dto.SearchCondition;
 import com.ssafy.board.model.dto.Video;

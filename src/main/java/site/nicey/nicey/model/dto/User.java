@@ -1,4 +1,4 @@
-package com.ssafy.board.model.dto;
+package site.nicey.nicey.model.dto;
 
 public class User {
 	private String id;

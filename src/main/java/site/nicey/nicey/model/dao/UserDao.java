@@ -1,8 +1,8 @@
-package com.ssafy.board.model.dao;
-
-import java.util.List;
+package site.nicey.nicey.model.dao;
 
 import com.ssafy.board.model.dto.User;
+
+import java.util.List;
 
 public interface UserDao {
 

@@ -1,9 +1,9 @@
-package com.ssafy.board.model.dao;
-
-import java.util.List;
+package site.nicey.nicey.model.dao;
 
 import com.ssafy.board.model.dto.Board;
 import com.ssafy.board.model.dto.SearchCondition;
+
+import java.util.List;
 
 public interface ReviewDao {
 	// 해당 비디오 Id 값의 리뷰들 다 가져오기

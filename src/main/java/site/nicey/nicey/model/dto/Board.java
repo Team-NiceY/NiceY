@@ -1,9 +1,6 @@
-package com.ssafy.board.model.dto;
+package site.nicey.nicey.model.dto;
 
 import io.swagger.annotations.ApiModel;
-
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 @ApiModel(value="게시판 바구니", description = "게시글 정보")
 public class Board {

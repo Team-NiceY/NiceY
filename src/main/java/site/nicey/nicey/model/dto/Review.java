@@ -1,4 +1,4 @@
-package com.ssafy.board.model.dto;
+package site.nicey.nicey.model.dto;
 
 import io.swagger.annotations.ApiModel;
 

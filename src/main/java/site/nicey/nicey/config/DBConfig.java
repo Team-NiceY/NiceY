@@ -1,4 +1,4 @@
-package com.ssafy.board.config;
+package site.nicey.nicey.config;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;

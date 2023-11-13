@@ -1,4 +1,4 @@
-package com.ssafy.board.controller;
+package site.nicey.nicey.controller;
 
 import com.ssafy.board.model.dto.SearchCondition;
 import com.ssafy.board.model.dto.Video;

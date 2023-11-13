@@ -1,9 +1,7 @@
-package com.ssafy.board.controller;
+package site.nicey.nicey.controller;
 
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
-
+import com.ssafy.board.model.dto.User;
+import com.ssafy.board.model.service.UserService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ssafy.board.model.dto.User;
-import com.ssafy.board.model.service.UserService;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api-user")

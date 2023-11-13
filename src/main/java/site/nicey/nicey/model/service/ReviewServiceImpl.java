@@ -1,14 +1,13 @@
-package com.ssafy.board.model.service;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+package site.nicey.nicey.model.service;
 
 import com.ssafy.board.model.dao.ReviewDao;
 import com.ssafy.board.model.dto.Board;
 import com.ssafy.board.model.dto.SearchCondition;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {

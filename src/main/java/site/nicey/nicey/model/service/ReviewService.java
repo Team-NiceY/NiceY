@@ -1,9 +1,9 @@
-package com.ssafy.board.model.service;
-
-import java.util.List;
+package site.nicey.nicey.model.service;
 
 import com.ssafy.board.model.dto.Board;
 import com.ssafy.board.model.dto.SearchCondition;
+
+import java.util.List;
 
 //사용자 친화적으로 작성
 public interface ReviewService {
