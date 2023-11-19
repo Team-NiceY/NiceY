@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.nicey.model.dao.UserDao">
+
+    <resultMap id="userMap" type="User">
+        <result column="user_id" property="userId" />
+        <result column="login_id" property="loginId" />
+        <result column="login_password" property="loginPassword" />
+        <result column="user_name" property="userName" />
+        <result column="phone_number" property="phoneNumber" />
+        <result column="email" property="email" />
+        <result column="social_login" property="socialLogin" />
+        <result column="social_id" property="socialId" />
+        <result column="connected_date" property="connectedDate" />
+    </resultMap>
+
+    <insert id="insertUser" parameterType="User">
+        INSERT INTO users (login_id, login_password, user_name, phone_number, email)
+        VALUES (#{loginId}, #{loginPassword}, #{userName}, #{phoneNumber}, #{email})
+    </insert>
+
+    <select id="selectUser" parameterType="User" resultMap="userMap">
+        SELECT *
+        FROM users
+        WHERE login_id = #{loginId}0
+    </select>
+
+</mapper>

@@ -1,4 +1,4 @@
-package site.nicey.nicey;
+package site.nicey;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

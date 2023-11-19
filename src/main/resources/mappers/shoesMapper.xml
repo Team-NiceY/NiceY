@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.nicey.model.dao.ShoesDao">
+
+    <resultMap id="shoesMap" type="Shoes">
+        <result column="shoes_id" property="shoesId" />
+        <result column="style_code" property="styleCode" />
+        <result column="color_code" property="colorCode" />
+        <result column="item_content" property="itemContent" />
+        <result column="item_name" property="itemName" />
+        <result column="price" property="price" />
+        <result column="sports_type" property="sportsType" />
+        <result column="gender" property="gender" />
+        <result column="score" property="score" />
+        <result column="release_date" property="releaseDate" />
+        <result column="image_path" property="imagePath" />
+    </resultMap>
+
+    <select id="selectAll" resultMap="shoesMap">
+        SELECT *
+        FROM shoes
+    </select>
+
+</mapper>
