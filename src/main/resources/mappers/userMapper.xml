@@ -24,7 +24,7 @@
     <select id="selectUser" parameterType="User" resultMap="userMap">
         SELECT *
         FROM users
-        WHERE login_id = #{loginId}0
+        WHERE login_id = #{loginId}
     </select>
 
 </mapper>
