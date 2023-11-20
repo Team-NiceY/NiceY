@@ -17,14 +17,15 @@
     </resultMap>
 
     <insert id="insertUser" parameterType="User">
-        INSERT INTO users (login_id, login_password, user_name, phone_number, email)
+        INSERT INTO users (login_id, login_password, user_name,
+        phone_number, email)
         VALUES (#{loginId}, #{loginPassword}, #{userName}, #{phoneNumber}, #{email})
     </insert>
 
     <select id="selectUser" parameterType="User" resultMap="userMap">
         SELECT *
         FROM users
-        WHERE login_id = #{loginId}0
+        WHERE login_id = #{loginId}
     </select>
 
 </mapper>
