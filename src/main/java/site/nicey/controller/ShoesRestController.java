@@ -25,9 +25,9 @@ public class ShoesRestController {
     // 신발 전체 목록 가져오기
 
     @Operation(summary="신발 리스트", description = "전체 신발 목록을 가져온다")
-    @GetMapping("/list")
-    public ResponseEntity<List<Shoes>> list() {
-        List<Shoes> list = shoesService.getListAll();
+    @GetMapping("/list/{sportsType}")
+    public ResponseEntity<List<Shoes>> list(String sportsType) {
+        List<Shoes> list = shoesService.getListAll(sportsType);
         return new ResponseEntity<List<Shoes>>(list, HttpStatus.OK);
     }
 

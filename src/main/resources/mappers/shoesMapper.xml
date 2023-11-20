@@ -18,9 +18,10 @@
         <result column="image_path" property="imagePath" />
     </resultMap>
 
-    <select id="selectAll" resultMap="shoesMap">
+    <select id="selectAll" parameterType="String" resultMap="shoesMap">
         SELECT *
         FROM shoes
+        WHERE sports_type = #{sportsType}
     </select>
 
 </mapper>
