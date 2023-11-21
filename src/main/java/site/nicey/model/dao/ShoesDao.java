@@ -7,4 +7,6 @@ import java.util.List;
 public interface ShoesDao {
 
     public List<Shoes> selectAll(String sportsType);
+
+    Shoes selectShoes(int shoesId);
 }

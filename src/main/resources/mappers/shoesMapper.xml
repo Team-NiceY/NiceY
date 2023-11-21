@@ -24,4 +24,10 @@
         WHERE sports_type = #{sportsType}
     </select>
 
+    <select id="selectShoes" parameterType="int" resultMap="shoesMap">
+        SELECT *
+        FROM shoes
+        WHERE shoes_id = #{shoesId}
+    </select>
+
 </mapper>

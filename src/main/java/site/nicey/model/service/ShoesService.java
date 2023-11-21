@@ -7,4 +7,6 @@ import java.util.List;
 public interface ShoesService {
 
     List<Shoes> getListAll(String sportsType);
+
+    Shoes getShoes(int shoesId);
 }

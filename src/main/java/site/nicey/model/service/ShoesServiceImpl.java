@@ -21,4 +21,9 @@ public class ShoesServiceImpl implements ShoesService {
     public List<Shoes> getListAll(String sportsType) {
         return shoesDao.selectAll(sportsType);
     }
+
+    @Override
+    public Shoes getShoes(int shoesId) {
+        return shoesDao.selectShoes(shoesId);
+    }
 }
