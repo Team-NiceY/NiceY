@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import site.nicey.model.dto.Shoes;
@@ -22,15 +23,21 @@ public class ShoesRestController {
     @Autowired
     private ShoesService shoesService;
 
-    // 신발 전체 목록 가져오기
-
+    // 신발 type별로 전체 목록 가져오기
     @Operation(summary="신발 리스트", description = "전체 신발 목록을 가져온다")
     @GetMapping("/list/{sportsType}")
-    public ResponseEntity<List<Shoes>> list(String sportsType) {
+    public ResponseEntity<List<Shoes>> list(@PathVariable String sportsType) {
         List<Shoes> list = shoesService.getListAll(sportsType);
         return new ResponseEntity<List<Shoes>>(list, HttpStatus.OK);
     }
 
+    // 신발 상세
+    @Operation(summary="신발 상세", description = "해당 신발의 정보를 가져온다")
+    @GetMapping("/detail/{shoesId}")
+    public ResponseEntity<Shoes> shoesSelect(@PathVariable int shoesId) {
+        Shoes shoes = shoesService.getShoes(shoesId);
+        return new ResponseEntity<Shoes>(shoes, HttpStatus.OK);
+    }
 
 
 }
