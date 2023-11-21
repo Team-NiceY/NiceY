@@ -12,7 +12,7 @@ import site.nicey.model.service.UserService;
 
 @Tag(name="user", description = "사용자API")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 //@Api(tags = "사용자 컨트롤러")
 public class UserRestController {
 
@@ -21,7 +21,7 @@ public class UserRestController {
 
     // 회원가입
     @Operation(summary="회원가입", description = "정보를 입력하여 회원가입")
-    @PostMapping("/signup")
+    @PostMapping("/regist")
     public ResponseEntity<Integer> signup(@RequestBody User user) {
         int result = userService.signup(user);
         return new ResponseEntity<Integer>(result, HttpStatus.CREATED);
