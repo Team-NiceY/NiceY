@@ -27,7 +27,7 @@
     <select id="selectShoes" parameterType="int" resultMap="shoesMap">
         SELECT *
         FROM shoes
-        WHERE shoes_id = #{shoesId}
+        WHERE shoes_id = ${shoesId}
     </select>
 
 </mapper>
