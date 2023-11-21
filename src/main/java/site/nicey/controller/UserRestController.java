@@ -15,7 +15,7 @@ import site.nicey.model.service.UserService;
 @RequestMapping("/api/user")
 //@Api(tags = "사용자 컨트롤러")
 public class UserRestController {
-
+// commit
     @Autowired
     private UserService userService;
 
