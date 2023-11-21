@@ -9,8 +9,8 @@ public class Review {
     private String reviewContent;
     private String uploadDate;
     private String editDate;
-    private int likeCnt;
-    private String delete;
+    private int viewCnt;
+    private String writer;
 
     public int getReviewId() {
         return reviewId;
@@ -68,20 +68,20 @@ public class Review {
         this.editDate = editDate;
     }
 
-    public int getLikeCnt() {
-        return likeCnt;
+    public int getViewCnt() {
+        return viewCnt;
     }
 
-    public void setLikeCnt(int likeCnt) {
-        this.likeCnt = likeCnt;
+    public void setViewCnt(int viewCnt) {
+        this.viewCnt = viewCnt;
     }
 
-    public String getDelete() {
-        return delete;
+    public String getWriter() {
+        return writer;
     }
 
-    public void setDelete(String delete) {
-        this.delete = delete;
+    public void setWriter(String writer) {
+        this.writer = writer;
     }
 
     @Override
@@ -94,8 +94,8 @@ public class Review {
                 ", reviewContent='" + reviewContent + '\'' +
                 ", uploadDate='" + uploadDate + '\'' +
                 ", editDate='" + editDate + '\'' +
-                ", likeCnt=" + likeCnt +
-                ", delete='" + delete + '\'' +
+                ", viewCnt=" + viewCnt +
+                ", writer='" + writer + '\'' +
                 '}';
     }
 }

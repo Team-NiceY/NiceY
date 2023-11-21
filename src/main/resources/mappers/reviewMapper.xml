@@ -12,8 +12,8 @@
         <result column="review_content" property="reviewContent" />
         <result column="upload_date" property="uploadDate" />
         <result column="edit_date" property="editDate" />
-        <result column="like_cnt" property="likeCnt" />
-        <result column="delete" property="delete" />
+        <result column="view_cnt" property="viewCnt" />
+        <result column="writer" property="writer" />
     </resultMap>
 
     <select id="selectReviewAll" parameterType="Shoes" resultMap="shoesMap">
@@ -23,8 +23,8 @@
     </select>
 
     <insert id="insertReview" parameterType="Review">
-        INSERT INTO reviews (user_id, shoes_id, review_title, review_content, delete)
-        VALUES (${userId} ${shoesId}, #{reviewTitle}, #{reviewContent}, 'N')
+        INSERT INTO reviews (user_id, shoes_id, review_title, review_content, writer)
+        VALUES (${userId} ${shoesId}, #{reviewTitle}, #{reviewContent}, #{writer})
     </insert>
 
     <update id="updateReview" parameterType="Review">
