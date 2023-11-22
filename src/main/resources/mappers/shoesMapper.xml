@@ -18,6 +18,12 @@
         <result column="image_path" property="imagePath" />
     </resultMap>
 
+    <resultMap id="recommendMap" type="Recommend">
+        <result column="rec_id" property="recId" />
+        <result column="shoes_id" property="shoesId" />
+        <result column="user_id" property="userId" />
+    </resultMap>
+
     <select id="selectAll" parameterType="String" resultMap="shoesMap">
         SELECT *
         FROM shoes
@@ -27,6 +33,17 @@
     <select id="selectShoes" parameterType="int" resultMap="shoesMap">
         SELECT *
         FROM shoes
+        WHERE shoes_id = ${shoesId}
+    </select>
+
+    <insert id="insertRecommend" parameterType="Recommend">
+        INSERT INTO recommends (shoes_id, user_id)
+        VALUES (${shoesId} ,${userId})
+    </insert>
+    
+    <select id="selectRecCnt" parameterType="int" resultType="int">
+        SELECT COUNT(*)
+        FROM recommends
         WHERE shoes_id = ${shoesId}
     </select>
 

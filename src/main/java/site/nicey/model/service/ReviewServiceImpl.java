@@ -46,4 +46,10 @@ public class ReviewServiceImpl implements ReviewService{
         reviewDao.deleteReview(review);
     }
 
+    @Override
+    public Review getReview(int reviewId) {
+        reviewDao.updateViewCnt(reviewId);
+        return reviewDao.getReview(reviewId);
+    }
+
 }
