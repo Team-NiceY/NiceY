@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ReviewDao {
 
-    List<Review> selectReviewAll(int id);
+    List<Review> selectReviewAll(int shoesId);
 
     void insertReview(Review review);
 
