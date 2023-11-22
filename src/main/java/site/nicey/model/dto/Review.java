@@ -2,7 +2,7 @@ package site.nicey.model.dto;
 
 public class Review {
 
-    private int reviewId;
+    private Integer reviewId;
     private int userId;
     private int shoesId;
     private String reviewTitle;
@@ -16,7 +16,7 @@ public class Review {
         return reviewId;
     }
 
-    public void setReviewId(int reviewId) {
+    public void setReviewId(Integer reviewId) {
         this.reviewId = reviewId;
     }
 

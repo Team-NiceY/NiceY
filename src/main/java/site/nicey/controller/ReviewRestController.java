@@ -20,9 +20,9 @@ public class ReviewRestController {
 
     // 해당 신발의 리뷰들을 가져온다
     @Operation(summary="신발 리뷰", description = "해당 신발의 리뷰 전체 가져온다")
-    @GetMapping("/{id}")
-    public ResponseEntity<?> reviewList (@PathVariable int id) {
-        List<Review> list = reviewService.getReviewList(id);
+    @GetMapping("/{shoesId}")
+    public ResponseEntity<?> reviewList (@PathVariable int shoesId) {
+        List<Review> list = reviewService.getReviewList(shoesId);
         if (list == null || list.isEmpty())
             return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
         else

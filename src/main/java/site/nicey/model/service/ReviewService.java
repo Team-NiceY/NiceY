@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ReviewService {
 
-    List<Review> getReviewList(int id);
+    List<Review> getReviewList(int shoesId);
 
     void writeReview(Review review);
 
