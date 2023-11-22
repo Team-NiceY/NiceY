@@ -63,5 +63,14 @@ public class ReviewRestController {
 //        }
     }
 
+    // 리뷰 상세
+    @Operation(summary="리뷰 상세", description = "해당 신발 리뷰의 정보를 가져온다")
+    @GetMapping("/detail/{reviewId}")
+    public ResponseEntity<Review> reviewSelect(@PathVariable int reviewId) {
+        Review review = reviewService.getReview(reviewId);
+        return new ResponseEntity<Review>(review, HttpStatus.OK);
+    }
+
+
 
 }

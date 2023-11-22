@@ -6,10 +6,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import site.nicey.model.dto.Recommend;
 import site.nicey.model.dto.Shoes;
 import site.nicey.model.service.ShoesService;
 
@@ -36,8 +34,18 @@ public class ShoesRestController {
     @GetMapping("/detail/{shoesId}")
     public ResponseEntity<Shoes> shoesSelect(@PathVariable int shoesId) {
         Shoes shoes = shoesService.getShoes(shoesId);
+        // 신발 추천수 가져와서 recCnt에 넣기
+        int cnt = shoesService.getRecommend(shoesId);
+        shoes.setRecCnt(cnt);
         return new ResponseEntity<Shoes>(shoes, HttpStatus.OK);
     }
 
+    // 신발 추천
+    @Operation(summary="신발 추천", description = "해당 신발을 추천한다")
+    @PostMapping("/recommend")
+    public ResponseEntity<Void> shoesRecommend(@RequestBody Recommend recommend) {
+        shoesService.recommend(recommend);
+        return new ResponseEntity<Void>(HttpStatus.OK);
+    }
 
 }

@@ -13,6 +13,15 @@ public class Shoes {
     private int score;
     private String releaseDate;
     private String imagePath;
+    private int recCnt;
+
+    public int getRecCnt() {
+        return recCnt;
+    }
+
+    public void setRecCnt(int recCnt) {
+        this.recCnt = recCnt;
+    }
 
     public int getShoesId() {
         return shoesId;
