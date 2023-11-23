@@ -12,7 +12,7 @@ import site.nicey.model.service.UserService;
 
 @Tag(name="user", description = "사용자API")
 @RestController
-@CrossOrigin("*")
+//@CrossOrigin("*")
 @RequestMapping("/api/user")
 //@Api(tags = "사용자 컨트롤러")
 public class UserRestController {
