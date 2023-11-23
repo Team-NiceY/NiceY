@@ -14,6 +14,7 @@ import site.nicey.model.service.ShoesService;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/shoes")
 //@Api(tags = "ㅅㅂ 컨트롤러")
 public class ShoesRestController {
