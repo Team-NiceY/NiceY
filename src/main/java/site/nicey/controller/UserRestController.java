@@ -7,12 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import site.nicey.model.dto.User;
 import site.nicey.model.service.UserService;
 
 @Tag(name="user", description = "사용자API")
 @RestController
-//@CrossOrigin("*")
+@CrossOrigin("*")
 @RequestMapping("/api/user")
 //@Api(tags = "사용자 컨트롤러")
 public class UserRestController {
