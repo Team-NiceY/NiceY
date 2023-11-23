@@ -54,15 +54,10 @@ public class ReviewRestController {
         // 세션에 저장된 id 확인 후 delete 해야함
         reviewService.reviewDelete(review);
         return new ResponseEntity<Void>(HttpStatus.OK);
-
-//        int result = reviewService.reviewWriter(review.getReviewId());
-//        if (result == review.getUserId())
-//            return new ResponseEntity<Void>(HttpStatus.UNAUTHORIZED);
-//        else {
-//            reviewService.reviewDelete(review);
-//            return new ResponseEntity<Void>(HttpStatus.OK);
-//        }
     }
+
+
+
 
     // 리뷰 상세
     @Operation(summary="리뷰 상세", description = "해당 신발 리뷰의 정보를 가져온다")
