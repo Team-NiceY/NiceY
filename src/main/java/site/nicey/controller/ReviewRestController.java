@@ -11,7 +11,7 @@ import site.nicey.model.service.ReviewService;
 import java.util.List;
 
 @RestController
-@RequestMapping("shoes/reviews")
+@RequestMapping("/api/shoes/reviews")
 //@Api(tags = "리뷰 컨트롤러")
 public class ReviewRestController {
 
