@@ -32,9 +32,9 @@ public class ReviewRestController {
     // 해당 신발의 리뷰를 작성한다.
     @Operation(summary="리뷰 작성", description = "해당 신발의 리뷰를 작성한다")
     @PostMapping()
-    public ResponseEntity<Review> reviewWrite(@RequestBody Review review) {
+    public ResponseEntity<Void> reviewWrite(@RequestBody Review review) {
         reviewService.writeReview(review);
-        return new ResponseEntity<Review>(review, HttpStatus.OK);
+        return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
     // 자신이 작성한 리뷰를 수정한다.
