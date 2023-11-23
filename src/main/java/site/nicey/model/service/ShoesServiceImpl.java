@@ -38,4 +38,9 @@ public class ShoesServiceImpl implements ShoesService {
     public int getRecommend(int shoesId) {
         return shoesDao.selectRecCnt(shoesId);
     }
+
+    @Override
+    public List<Shoes> getSearchList(String search) {
+        return shoesDao.selectSearchAll(search);
+    }
 }

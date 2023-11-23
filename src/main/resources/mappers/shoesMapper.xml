@@ -47,4 +47,10 @@
         WHERE shoes_id = ${shoesId}
     </select>
 
+    <select id="selectSearchAll" parameterType="String" resultMap="shoesMap">
+        SELECT *
+        FROM shoes
+        WHERE item_name LIKE CONCAT('%', #{search}, '%')
+    </select>
+
 </mapper>

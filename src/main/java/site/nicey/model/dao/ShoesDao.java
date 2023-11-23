@@ -14,4 +14,6 @@ public interface ShoesDao {
     void insertRecommend(Recommend recommend);
 
     int selectRecCnt(int shoesId);
+
+    List<Shoes> selectSearchAll(String search);
 }

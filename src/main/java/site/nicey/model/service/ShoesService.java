@@ -14,4 +14,6 @@ public interface ShoesService {
     void recommend(Recommend recommend);
 
     int getRecommend(int shoesId);
+
+    List<Shoes> getSearchList(String search);
 }

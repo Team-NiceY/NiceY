@@ -40,7 +40,7 @@ public class ShoesRestController {
         return new ResponseEntity<Shoes>(shoes, HttpStatus.OK);
     }
 
-    // 신발 추천
+    // 신발 추천기능
     @Operation(summary="신발 추천", description = "해당 신발을 추천한다")
     @PostMapping("/recommend")
     public ResponseEntity<Void> shoesRecommend(@RequestBody Recommend recommend) {
@@ -48,4 +48,14 @@ public class ShoesRestController {
         return new ResponseEntity<Void>(HttpStatus.OK);
     }
 
+    // 신발 검색
+    @Operation(summary="신발 검색", description = "해당 검색어를 가진 제품명을 가져온다")
+    @GetMapping("/search/{search}")
+    public ResponseEntity<?> shoesSearch(@PathVariable String search) {
+        List<Shoes> list = shoesService.getSearchList(search);
+        if (list == null || list.isEmpty())
+            return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+        else
+            return new ResponseEntity<List<Shoes>>(list, HttpStatus.OK);
+    }
 }
